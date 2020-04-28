@@ -8,7 +8,7 @@ class TrixEditor
 {
     public function handle(LaravelTrix $trix, \Closure $next)
     {
-        $trix->html .= "<trix-editor style="height:18rem; border:none;" class='trix-content' input='{$trix->config['id']}' data-config='".json_encode($trix->config)."'></trix-editor>";
+        $trix->html .= "<trix-editor style="height:100%; border:none;" class='trix-content' input='{$trix->config['id']}' data-config='".json_encode($trix->config)."'></trix-editor>";
 
         return $next($trix);
     }
